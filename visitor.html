@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Duck Tales Cinema - Visitor</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="crawler.js"></script>
+
+
+</head>
+<body>
+
+<h1>DuckTales Cinema</h1>
+
+
+<div class="gallery_visitor" id="gallery">
+
+    <a href="film.html"> <img src="img1.jpeg" alt="movie" /></a>
+        <a href="film.html"><img src="img1.jpeg" alt="movie" /></a>
+            <a href="film.html"> <img src="img1.jpeg" alt="movie" /></a>
+
+</div>
+<br>
+<br>
+
+
+<div class="tab-panels">
+    <ul class="tabs">
+        <li rel="panel1" class="active">panel 1</li>
+        <li rel="panel2">panel 2</li>
+        <li rel="panel3">panel 3</li>
+    </ul>
+
+    <div id="panel1" class="panel active">
+        content1<br/>
+        content1<br/>
+        content1<br/>
+        content1<br/>
+        content1<br/>
+    </div>
+    <div id="panel2" class="panel">
+        content2<br/>
+        content2<br/>
+        content2<br/>
+        content2<br/>
+        content2<br/>
+    </div>
+    <div id="panel3" class="panel">
+        content3<br/>
+        content3<br/>
+        content3<br/>
+        content3<br/>
+        content3<br/>
+    </div>
+</div>
+<br>
+<br>
+
+
+
+<div class="tab-panels">
+    <ul class="tabs">
+        <li rel="panel5" class="active">panel 5</li>
+        <li rel="panel6">panel 6</li>
+        <li rel="panel7">panel 7</li>
+
+    </ul>
+
+    <div id="panel5" class="panel active">
+        content5<br/>
+        content5<br/>
+        content5<br/>
+        content5<br/>
+        content5<br/>
+    </div>
+    <div id="panel6" class="panel">
+        content6<br/>
+        content6<br/>
+        content6<br/>
+        content6<br/>
+        content6<br/>
+    </div>
+    <div id="panel7" class="panel">
+        content7<br/>
+        content7<br/>
+        content7<br/>
+        content7<br/>
+        content7<br/>
+    </div>
+
+</div>
+<br>
+<br>
+
+
+<table class="main_tab">
+
+    <tr>
+
+        <td>AAAAAAAAAAAAAAAAAAAAAAAAAA
+            SSSSSSSSSSSSSSSSSSSSSSSSSS
+            SSSSSSSSSSSSSSSSSSSSSSSSSS
+            SSSSSSSSSSSSSSSSSSSSSSSSSS
+            SSSSSSSSSSSSSSSSSSSSSSSSSS
+            SSSSSSSSSSSSSSSSSSSSSSSSSS</td>
+        <td>AAAAAAAAAAAAAAAAAAAAAAAAAA
+            SSSSSSSSSSSSSSSSSSSSSSSSSS
+            SSSSSSSSSSSSSSSSSSSSSSSSSS
+            SSSSSSSSSSSSSSSSSSSSSSSSSS
+            SSSSSSSSSSSSSSSSSSSSSSSSSS
+            SSSSSSSSSSSSSSSSSSSSSSSSSS</td>
+        <td>AAAAAAAAAAAAAAAAAAAAAAAAAA
+            SSSSSSSSSSSSSSSSSSSSSSSSSS
+            SSSSSSSSSSSSSSSSSSSSSSSSSS
+            SSSSSSSSSSSSSSSSSSSSSSSSSS
+            SSSSSSSSSSSSSSSSSSSSSSSSSS
+            SSSSSSSSSSSSSSSSSSSSSSSSSS</td>
+    </tr>
+
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!--
+    <script>
+      $(document).ready(function() {
+
+        $('p').hide(); //hide paragraphs
+        $('h1').click(function(){
+           $(this).next().slideToggle(100);
+        });
+
+    });
+    </script>
+    -->
+
+    <script>
+  $(document).ready(function() {
+
+    $("#panel").hide();
+    $("#login").click(function(){
+       $("#panel").slideToggle(500);
+    });
+
+});
+</script>
+
+    <script>
+$(function() {
+
+    $('.tab-panels .tabs li').on('click', function() {
+
+        var $panel = $(this).closest('.tab-panels');
+
+        $panel.find('.tabs li.active').removeClass('active');
+        $(this).addClass('active');
+
+        //figure out which panel to show
+        var panelToShow = $(this).attr('rel');
+
+        //hide current panel
+        $panel.find('.panel.active').slideUp(300, showNextPanel);
+
+        //show next panel
+        function showNextPanel() {
+            $(this).removeClass('active');
+
+            $('#'+panelToShow).slideDown(300, function() {
+                $(this).addClass('active');
+            });
+        }
+    });
+
+
+});
+</script>
+
+</body>
+</html>
