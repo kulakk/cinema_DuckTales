@@ -7,6 +7,10 @@ width: auto;
 color: white; 
 }
 
+.error {
+	color: #ff0000;
+}
+
 #body, h1 {
 margin: 0 auto;
 text-align: center;
@@ -253,4 +257,55 @@ background-color: blue;
 font-family: Courier;
 font-size: 20px;
 text-align: center;
+}
+
+#chooser {
+position: relative;
+width: 80%;
+margin: 0 auto;
+padding: 15px;
+}
+
+#chooser label {
+display: block;
+text-align: center;
+margin-bottom: 30px;
+font-size: 25px;
+text-shadow: 5px silver;
+}
+
+.choose_it {
+float: left;
+width: 15%;
+margin-left: 30px;
+margin-right: 30px;
+margin-bottom: 20px;
+padding: 20px;
+text-align: center;
+font-size: 25px;
+font-family: Courier;
+}
+
+.user_info {
+clear:both;
+text-align: center;
+}
+
+.user_info label {
+display: block;
+text-align: center;
+margin-bottom: 3px;
+font-size: 19px;
+font-family: Courier;
+
+}
+
+.user_info input[type="submit"] {
+padding: 5px;
+margin-top: 25px;
+border: outset;
+}
+
+input, select {
+border-radius: 5px;
 }

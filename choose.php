@@ -16,6 +16,7 @@
 <!-- informuje o typie plikowym -->
 <select name="trudnosc">
 <option value="latwe" label="Łatwe">Łatwe</option>
+
 <option value="srednio trudne" label="Średnio trudne">Średnio trudne</option>
 <option value="trudne" label="Trudne">Trudne</option>
 </select>
